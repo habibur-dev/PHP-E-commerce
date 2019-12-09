@@ -2,44 +2,62 @@
 
 	<div class="panel-heading"><!-- panel-heading Begin -->
 
-		<h3 class="panel-title">Products Categories</h3>
+		<center><!-- center Begin -->
+
+			<img src="customer_images/avatar.png">
+			
+		</center><!-- center Finish -->
+		<br>
+
+		<h3 align="center" class="panel-title"><!-- panel-title Begin -->
+
+			Mike
+			
+		</h3><!-- panel-title Finish -->
 		
 	</div><!-- panel-heading Finish -->
 
 	<div class="panel-body"><!-- panel-body Begin -->
 
-		<ul class="nav nav-pills nav-stacked category-menu"><!-- nav nav-pills nav-stacked category-menu Begin -->
+		<ul class="nav-pills nav-stacked nav"><!-- nav-pills nav-stacked nav Begin -->
 
-			<li><a href="#">Jackets</a></li>
-			<li><a href="#">Accessories</a></li>
-			<li><a href="#">Shoes</a></li>
-			<li><a href="#">Coats</a></li>
-			<li><a href="#">T-Shirt</a></li>
+			<li class="<?php if(isset($_GET['my_orders'])){echo "active";} ?>">
+				<a href="my_account.php?my_orders">
+					<i class="fa fa-list"></i> My Orders
+				</a>
+			</li>
+
+			<li class="<?php if(isset($_GET['pay_offline'])){echo "active";} ?>">
+				<a href="my_account.php?pay_offline">
+					<i class="fa fa-bolt"></i> Pay offline
+				</a>
+			</li>
+
+			<li class="<?php if(isset($_GET['edit_account'])){echo "active";} ?>">
+				<a href="my_account.php?edit_account">
+					<i class="fa fa-pencil"></i> Edit Account
+				</a>
+			</li>
+
+			<li class="<?php if(isset($_GET['change_pass'])){echo "active";} ?>">
+				<a href="my_account.php?change_pass">
+					<i class="fa fa-user"></i> Change Password
+				</a>
+			</li>
+
+			<li class="<?php if(isset($_GET['delete_account'])){echo "active";} ?>">
+				<a href="my_account.php?delete_account">
+					<i class="fa fa-trash-o"></i> Delete Account
+				</a>
+			</li>
+
+			<li>
+				<a href="logout.php">
+					<i class="fa fa-sign-out"></i> Log Out
+				</a>
+			</li>
 			
-		</ul><!-- nav nav-pills nav-stacked category-menu Finish -->
-		
-	</div><!-- panel-body Finish -->
-	
-</div><!-- panel panel-default sidebar-menu Finish -->
-
-<div class="panel panel-default sidebar-menu"><!-- panel panel-default sidebar-menu Begin -->
-
-	<div class="panel-heading"><!-- panel-heading Begin -->
-
-		<h3 class="panel-title">Categories</h3>
-		
-	</div><!-- panel-heading Finish -->
-
-	<div class="panel-body"><!-- panel-body Begin -->
-
-		<ul class="nav nav-pills nav-stacked category-menu"><!-- nav nav-pills nav-stacked category-menu Begin -->
-
-			<li><a href="#">Men</a></li>
-			<li><a href="#">Women</a></li>
-			<li><a href="#">Kids</a></li>
-			<li><a href="#">Others</a></li>
-			
-		</ul><!-- nav nav-pills nav-stacked category-menu Finish -->
+		</ul><!-- nav-pills nav-stacked nav Finish -->
 		
 	</div><!-- panel-body Finish -->
 	

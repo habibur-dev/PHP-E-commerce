@@ -124,15 +124,67 @@
 
       <div class="col-md-9"><!-- col-md-9 Begin -->
 
-        <div class="box"><!-- box Finish -->
+        <div class="box"><!-- box Begin -->
 
-          <?php
+          <h1 align="center">Please confirm your payment</h1>
 
-          if(isset($_GET['my_orders'])){
-            include "my_orders.php";
-          }
+          <form action="confirm.php" method="post" enctype="multipart/form-data"><!-- form Begin -->
 
-          ?>
+            <div class="form-group"><!-- form-group Begin -->
+
+              <label>Invoice No: </label>
+              <input type="text" name="invoice_no" class="form-control" required>
+              
+            </div><!-- form-group Finish -->
+
+            <div class="form-group"><!-- form-group Begin -->
+
+              <label>Amount Sent: </label>
+              <input type="text" name="amount_sent" class="form-control" required>
+              
+            </div><!-- form-group Finish -->
+
+            <div class="form-group"><!-- form-group Begin -->
+
+              <label>Select Payment Method: </label>
+              <select name="payment_mode" class="form-control">
+
+                <option>Select Payment Method</option>
+                <option>BKash</option>
+                <option>Rocket</option>
+                <option>Bank</option>
+                <option>Master Card</option>
+                <option>Western Union</option>
+
+              </select>
+              
+            </div><!-- form-group Finish -->
+
+            <div class="form-group"><!-- form-group Begin -->
+
+              <label>Transaction / Reference No: </label>
+              <input type="text" name="ref_no" class="form-control" required>
+              
+            </div><!-- form-group Finish -->
+
+            <div class="form-group"><!-- form-group Begin -->
+
+              <label>Payment Date: </label>
+              <input type="text" name="date" class="form-control" required>
+              
+            </div><!-- form-group Finish -->
+
+            <div class="text-center"><!-- text-center Begin -->
+
+              <button class="btn btn-primary btn-lg">
+
+                <i class="fa fa-user"></i> Confirm Payment
+                
+              </button>
+              
+            </div><!-- text-center Finish -->
+            
+          </form><!-- form Finish -->
           
         </div><!-- box Finish -->
         
