@@ -1,2 +1,1 @@
-#PHP E-commerce website
-This is my first PHP project
+# php e-commerce website
