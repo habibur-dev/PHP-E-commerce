@@ -118,29 +118,52 @@
                
         <div class="carousel-inner"><!-- carousel-inner Begin -->
                    
-          <div class="item active">
-                       
-            <img src="admin_area/slides_images/slide-1.png" alt="Slider Image 1">
-                       
-          </div>
-                   
-          <div class="item">
-                       
-            <img src="admin_area/slides_images/slide-2.png" alt="Slider Image 2">
-                       
-          </div>
-                   
-          <div class="item">
-                       
-            <img src="admin_area/slides_images/slide-3.png" alt="Slider Image 3">
-                       
-          </div>
-                   
-          <div class="item">
-                       
-            <img src="admin_area/slides_images/slide-4.png" alt="Slider Image 4">
-                       
-          </div>
+          <?php
+
+
+          $get_slides = "SELECT * FROM slider LIMIT 0,1";
+          $run_slider = mysqli_query($conn, $get_slides);
+
+          while ($row_slides=mysqli_fetch_array($run_slider)) {
+            
+            $slide_name = $row_slides['slide_name'];
+            $slide_image = $row_slides['slide_image'];
+
+            echo "
+
+              <div class='item active'>
+
+              <img src='admin_area/slides_images/$slide_image'>
+
+              </div>
+
+            ";
+
+          }
+
+
+          $get_slides = "SELECT * FROM slider LIMIT 1,3";
+          $run_slides = mysqli_query($conn, $get_slides);
+
+          while ($row_slides=mysqli_fetch_array($run_slides)) {
+            
+            $slide_name = $row_slides['slide_name'];
+            $slide_image = $row_slides['slide_image'];
+
+            echo "
+
+              <div class='item'>
+
+              <img src='admin_area/slides_images/$slide_image'>
+
+              </div>
+
+            ";
+
+          }
+
+
+          ?>
                    
         </div><!-- carousel-inner Finish -->
                
